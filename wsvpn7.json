@@ -23,8 +23,8 @@
                 "tag": "select",
                 "outbounds": [
                         "auto",
-                        "IP->Iran, Yotube:Geekmeek",
-                        "IP->Main, Yotube:Geekmeek"
+                        "IP->Iran, Yotube:SABA",
+                        "IP->Main, Yotube:SABA"
                 ],
                 "default": "auto"
                 },
@@ -32,15 +32,15 @@
                 "type": "urltest",
                 "tag": "auto",
                 "outbounds": [
-                        "IP->Iran, Yotube:Geekmeek",
-                        "IP->Main, Yotube:Geekmeek"
+                        "IP->Iran, Yotube:SABA",
+                        "IP->Main, Yotube:SABA"
                 ],
                 "url": "http://cp.cloudflare.com/",
                 "interval": "10m0s"
                 },
                 {
                 "type": "wireguard",
-                "tag": "IP->Iran, Yotube:Geekmeek",
+                "tag": "IP->Iran, Yotube:SABA",
                 "local_address": [
                         "172.16.0.2/32",
                         "2606:4700:110:8799:b54e:6d84:42b8:3104/128"
@@ -55,8 +55,8 @@
                 },
                 {
                 "type": "wireguard",
-                "tag": "IP->Main, Yotube:Geekmeek",
-                "detour": "IP->Iran, Yotube:Geekmeek",
+                "tag": "IP->Main, Yotube:SABA",
+                "detour": "IP->Iran, Yotube:SABA",
                 "local_address": [
                         "172.16.0.2/32",
                         "2606:4700:110:8a0a:aa4:e120:93f0:659f/128"
