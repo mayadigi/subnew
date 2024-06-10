@@ -1,0 +1,1 @@
+warp://162.159.192.94:878?ifp=10-20&ifps=20-60&ifpd=5-10#Warp-IR&&detour=warp://162.159.192.124:8854?ifp=10-20&ifps=20-60&ifpd=5-10#Warp-IN-Warp
