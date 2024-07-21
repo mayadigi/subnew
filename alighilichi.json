@@ -1,0 +1,1752 @@
+{
+  "log": {
+    "level": "warn",
+    "output": "box.log",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "address": "udp://1.1.1.1",
+        "address_resolver": "dns-direct"
+      },
+      {
+        "tag": "dns-trick-direct",
+        "address": "https://sky.rethinkdns.com/",
+        "detour": "direct-fragment"
+      },
+      {
+        "tag": "dns-direct",
+        "address": "1.1.1.1",
+        "address_resolver": "dns-local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-local",
+        "address": "local",
+        "detour": "direct"
+      },
+      {
+        "tag": "dns-block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      {
+        "domain": [
+          "ns.cloudflare.com",
+          "www.speedtest.net",
+          "www.parsvds.ir"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "domain": "cp.cloudflare.com",
+        "server": "dns-remote",
+        "rewrite_ttl": 3000
+      }
+    ],
+    "final": "dns-remote",
+    "static_ips": {
+      "sky.rethinkdns.com": [
+        "104.17.148.22",
+        "104.17.147.22",
+        "188.114.97.0",
+        "188.114.96.0",
+        "2a06:98c1:3121::",
+        "2a06:98c1:3120::"
+      ]
+    },
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "mtu": 9000,
+      "inet4_address": "172.19.0.1/28",
+      "auto_route": true,
+      "strict_route": true,
+      "endpoint_independent_nat": true,
+      "stack": "mixed",
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true
+    },
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 6450
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 0",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 1",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 2",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 3",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 4",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 5",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 6",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 7",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 8",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 9",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 10",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 11",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 12",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 13",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 14",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 15",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 16",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 17",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 18",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 19",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 20",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 21",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 22",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 23",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 24",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 25",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 26",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 27",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 28",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 29",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 30",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 31",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 32",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 33",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 34",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 35",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 36",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 37",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 38",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 39",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 40",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 41",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 42",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 43",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 44",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 45",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 46",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 47",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 48",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 49",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 50",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 51",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 52",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 53",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 54",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 55",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 56",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 57",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 58",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 59",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 60",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 61",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 62",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 63",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 64",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 65",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 66",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 67",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 68",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 69",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 70",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 71",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 72",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 73",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 74",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 75",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 76",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 77",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 78",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 79",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 80",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 81",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 82",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 83"
+      ],
+      "default": "auto"
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "☬ SHΞЯVIN™ ⚪ رایگان § 0",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 1",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 2",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 3",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 4",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 5",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 6",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 7",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 8",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 9",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 10",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 11",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 12",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 13",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 14",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 15",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 16",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 17",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 18",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 19",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 20",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 21",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 22",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 23",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 24",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 25",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 26",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 27",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 28",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 29",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 30",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 31",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 32",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 33",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 34",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 35",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 36",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 37",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 38",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 39",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 40",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 41",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 42",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 43",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 44",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 45",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 46",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 47",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 48",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 49",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 50",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 51",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 52",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 53",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 54",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 55",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 56",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 57",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 58",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 59",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 60",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 61",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 62",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 63",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 64",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 65",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 66",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 67",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 68",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 69",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 70",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 71",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 72",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 73",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 74",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 75",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 76",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 77",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 78",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 79",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 80",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 81",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 82",
+        "☬ SHΞЯVIN™ ⚪ رایگان § 83"
+      ],
+      "url": "http://connectivitycheck.gstatic.com/generate_204",
+      "interval": "10m0s",
+      "idle_timeout": "1h40m0s"
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 0",
+      "server": "104.21.94.168",
+      "server_port": 8080,
+      "uuid": "Telegram-NUFiLTER",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER?ed=2048?ed=2048",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 1",
+      "server": "104.31.16.85",
+      "server_port": 80,
+      "uuid": "043e1274-0608-430f-821f-78578b636dc8",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "1.V.V2.www.speedtest.net.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 2",
+      "server": "ns.cloudflare.com",
+      "server_port": 80,
+      "uuid": "404711ea-9af9-4f48-c0b9-d3f6953b690a",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "10.V.V2.www.speedtest.net.ftp.debian.org.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 3",
+      "server": "188.114.97.2",
+      "server_port": 2095,
+      "uuid": "DIgiV2RAy",
+      "transport": {
+        "type": "ws",
+        "path": "/DigiconnecT",
+        "headers": {
+          "Host": "wWw.vArZeSh3.Com.QUENTIN.1.1.1.1.radiotehran.org."
+        },
+        "max_early_data": 1024,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 4",
+      "server": "104.17.147.22",
+      "server_port": 2095,
+      "uuid": "f93c6da4-f76f-4e8e-b952-3a378e10305d",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "7.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 5",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "Telegram-ipV2Ray-zaw",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram-ipV2Ray",
+        "headers": {
+          "Host": "c.1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 6",
+      "server": "104.17.47.75",
+      "server_port": 8080,
+      "uuid": "2a9bd227-bef2-4fea-a153-7e8423a07277",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram:@vmessorg-Telegram:@vmessorg-Telegram:@vmessorg",
+        "headers": {
+          "Host": "join-to.vmessorg.Community."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 7",
+      "server": "www.speedtest.net",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 8",
+      "server": "188.114.97.3",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 9",
+      "server": "190.93.247.155",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 10",
+      "server": "104.16.11.133",
+      "server_port": 80,
+      "uuid": "914fdeef-41a3-4ef0-ab53-f4c5cee31161",
+      "transport": {
+        "type": "ws",
+        "path": "/@Vpn_Mikey%D8%8C@Vpn_Mikey",
+        "headers": {
+          "Host": "Vpn_Mikey-speedtest.net.Amir-Mikey.Tech."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 11",
+      "server": "www.parsvds.ir",
+      "server_port": 2095,
+      "uuid": "fb928eb2-6ca0-4b05-a2ed-9871d8e0891e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "31.V.v.ww.speedtest.net.zula.ir.pinocchio1.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 12",
+      "server": "www.parsvds.ir",
+      "server_port": 8080,
+      "uuid": "-Shh-Proxy-",
+      "transport": {
+        "type": "ws",
+        "path": "/SHHPROXY",
+        "headers": {
+          "Host": "SHHproxy-shhPROXY-SHHproxy.ntherspeedtest.net."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 13",
+      "server": "104.17.148.22",
+      "server_port": 8080,
+      "uuid": "3a2c2063-6841-4c31-859e-0054573b7bf3",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 14",
+      "server": "104.21.94.168",
+      "server_port": 8080,
+      "uuid": "Telegram-NUFiLTER",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER?ed=2048?ed=2048",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 15",
+      "server": "104.31.16.85",
+      "server_port": 80,
+      "uuid": "043e1274-0608-430f-821f-78578b636dc8",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "1.V.V2.www.speedtest.net.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 16",
+      "server": "ns.cloudflare.com",
+      "server_port": 80,
+      "uuid": "404711ea-9af9-4f48-c0b9-d3f6953b690a",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "10.V.V2.www.speedtest.net.ftp.debian.org.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 17",
+      "server": "188.114.97.2",
+      "server_port": 2095,
+      "uuid": "DIgiV2RAy",
+      "transport": {
+        "type": "ws",
+        "path": "/DigiconnecT",
+        "headers": {
+          "Host": "wWw.vArZeSh3.Com.QUENTIN.1.1.1.1.radiotehran.org."
+        },
+        "max_early_data": 1024,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 18",
+      "server": "104.17.147.22",
+      "server_port": 2095,
+      "uuid": "f93c6da4-f76f-4e8e-b952-3a378e10305d",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "7.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 19",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "Telegram-ipV2Ray-zaw",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram-ipV2Ray",
+        "headers": {
+          "Host": "c.1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 20",
+      "server": "104.17.47.75",
+      "server_port": 8080,
+      "uuid": "2a9bd227-bef2-4fea-a153-7e8423a07277",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram:@vmessorg-Telegram:@vmessorg-Telegram:@vmessorg",
+        "headers": {
+          "Host": "join-to.vmessorg.Community."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 21",
+      "server": "www.speedtest.net",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 22",
+      "server": "188.114.97.3",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 23",
+      "server": "190.93.247.155",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 24",
+      "server": "104.16.11.133",
+      "server_port": 80,
+      "uuid": "914fdeef-41a3-4ef0-ab53-f4c5cee31161",
+      "transport": {
+        "type": "ws",
+        "path": "/@Vpn_Mikey%D8%8C@Vpn_Mikey",
+        "headers": {
+          "Host": "Vpn_Mikey-speedtest.net.Amir-Mikey.Tech."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 25",
+      "server": "www.parsvds.ir",
+      "server_port": 2095,
+      "uuid": "fb928eb2-6ca0-4b05-a2ed-9871d8e0891e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "31.V.v.ww.speedtest.net.zula.ir.pinocchio1.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 26",
+      "server": "www.parsvds.ir",
+      "server_port": 8080,
+      "uuid": "-Shh-Proxy-",
+      "transport": {
+        "type": "ws",
+        "path": "/SHHPROXY",
+        "headers": {
+          "Host": "SHHproxy-shhPROXY-SHHproxy.ntherspeedtest.net."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 27",
+      "server": "104.17.148.22",
+      "server_port": 8080,
+      "uuid": "3a2c2063-6841-4c31-859e-0054573b7bf3",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 28",
+      "server": "104.21.94.168",
+      "server_port": 8080,
+      "uuid": "Telegram-NUFiLTER",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER?ed=2048?ed=2048",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 29",
+      "server": "104.31.16.85",
+      "server_port": 80,
+      "uuid": "043e1274-0608-430f-821f-78578b636dc8",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "1.V.V2.www.speedtest.net.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 30",
+      "server": "ns.cloudflare.com",
+      "server_port": 80,
+      "uuid": "404711ea-9af9-4f48-c0b9-d3f6953b690a",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "10.V.V2.www.speedtest.net.ftp.debian.org.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 31",
+      "server": "188.114.97.2",
+      "server_port": 2095,
+      "uuid": "DIgiV2RAy",
+      "transport": {
+        "type": "ws",
+        "path": "/DigiconnecT",
+        "headers": {
+          "Host": "wWw.vArZeSh3.Com.QUENTIN.1.1.1.1.radiotehran.org."
+        },
+        "max_early_data": 1024,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 32",
+      "server": "104.17.147.22",
+      "server_port": 2095,
+      "uuid": "f93c6da4-f76f-4e8e-b952-3a378e10305d",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "7.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 33",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "Telegram-ipV2Ray-zaw",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram-ipV2Ray",
+        "headers": {
+          "Host": "c.1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 34",
+      "server": "104.17.47.75",
+      "server_port": 8080,
+      "uuid": "2a9bd227-bef2-4fea-a153-7e8423a07277",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram:@vmessorg-Telegram:@vmessorg-Telegram:@vmessorg",
+        "headers": {
+          "Host": "join-to.vmessorg.Community."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 35",
+      "server": "www.speedtest.net",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 36",
+      "server": "188.114.97.3",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 37",
+      "server": "190.93.247.155",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 38",
+      "server": "104.16.11.133",
+      "server_port": 80,
+      "uuid": "914fdeef-41a3-4ef0-ab53-f4c5cee31161",
+      "transport": {
+        "type": "ws",
+        "path": "/@Vpn_Mikey%D8%8C@Vpn_Mikey",
+        "headers": {
+          "Host": "Vpn_Mikey-speedtest.net.Amir-Mikey.Tech."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 39",
+      "server": "www.parsvds.ir",
+      "server_port": 2095,
+      "uuid": "fb928eb2-6ca0-4b05-a2ed-9871d8e0891e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "31.V.v.ww.speedtest.net.zula.ir.pinocchio1.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 40",
+      "server": "www.parsvds.ir",
+      "server_port": 8080,
+      "uuid": "-Shh-Proxy-",
+      "transport": {
+        "type": "ws",
+        "path": "/SHHPROXY",
+        "headers": {
+          "Host": "SHHproxy-shhPROXY-SHHproxy.ntherspeedtest.net."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 41",
+      "server": "104.17.148.22",
+      "server_port": 8080,
+      "uuid": "3a2c2063-6841-4c31-859e-0054573b7bf3",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 42",
+      "server": "104.21.94.168",
+      "server_port": 8080,
+      "uuid": "Telegram-NUFiLTER",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER?ed=2048?ed=2048",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 43",
+      "server": "104.31.16.85",
+      "server_port": 80,
+      "uuid": "043e1274-0608-430f-821f-78578b636dc8",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "1.V.V2.www.speedtest.net.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 44",
+      "server": "ns.cloudflare.com",
+      "server_port": 80,
+      "uuid": "404711ea-9af9-4f48-c0b9-d3f6953b690a",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "10.V.V2.www.speedtest.net.ftp.debian.org.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 45",
+      "server": "188.114.97.2",
+      "server_port": 2095,
+      "uuid": "DIgiV2RAy",
+      "transport": {
+        "type": "ws",
+        "path": "/DigiconnecT",
+        "headers": {
+          "Host": "wWw.vArZeSh3.Com.QUENTIN.1.1.1.1.radiotehran.org."
+        },
+        "max_early_data": 1024,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 46",
+      "server": "104.17.147.22",
+      "server_port": 2095,
+      "uuid": "f93c6da4-f76f-4e8e-b952-3a378e10305d",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "7.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 47",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "Telegram-ipV2Ray-zaw",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram-ipV2Ray",
+        "headers": {
+          "Host": "c.1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 48",
+      "server": "104.17.47.75",
+      "server_port": 8080,
+      "uuid": "2a9bd227-bef2-4fea-a153-7e8423a07277",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram:@vmessorg-Telegram:@vmessorg-Telegram:@vmessorg",
+        "headers": {
+          "Host": "join-to.vmessorg.Community."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 49",
+      "server": "www.speedtest.net",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 50",
+      "server": "188.114.97.3",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 51",
+      "server": "190.93.247.155",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 52",
+      "server": "104.16.11.133",
+      "server_port": 80,
+      "uuid": "914fdeef-41a3-4ef0-ab53-f4c5cee31161",
+      "transport": {
+        "type": "ws",
+        "path": "/@Vpn_Mikey%D8%8C@Vpn_Mikey",
+        "headers": {
+          "Host": "Vpn_Mikey-speedtest.net.Amir-Mikey.Tech."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 53",
+      "server": "www.parsvds.ir",
+      "server_port": 2095,
+      "uuid": "fb928eb2-6ca0-4b05-a2ed-9871d8e0891e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "31.V.v.ww.speedtest.net.zula.ir.pinocchio1.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 54",
+      "server": "www.parsvds.ir",
+      "server_port": 8080,
+      "uuid": "-Shh-Proxy-",
+      "transport": {
+        "type": "ws",
+        "path": "/SHHPROXY",
+        "headers": {
+          "Host": "SHHproxy-shhPROXY-SHHproxy.ntherspeedtest.net."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 55",
+      "server": "104.17.148.22",
+      "server_port": 8080,
+      "uuid": "3a2c2063-6841-4c31-859e-0054573b7bf3",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 56",
+      "server": "104.21.94.168",
+      "server_port": 8080,
+      "uuid": "Telegram-NUFiLTER",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER?ed=2048?ed=2048",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 57",
+      "server": "104.31.16.85",
+      "server_port": 80,
+      "uuid": "043e1274-0608-430f-821f-78578b636dc8",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "1.V.V2.www.speedtest.net.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 58",
+      "server": "ns.cloudflare.com",
+      "server_port": 80,
+      "uuid": "404711ea-9af9-4f48-c0b9-d3f6953b690a",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "10.V.V2.www.speedtest.net.ftp.debian.org.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 59",
+      "server": "188.114.97.2",
+      "server_port": 2095,
+      "uuid": "DIgiV2RAy",
+      "transport": {
+        "type": "ws",
+        "path": "/DigiconnecT",
+        "headers": {
+          "Host": "wWw.vArZeSh3.Com.QUENTIN.1.1.1.1.radiotehran.org."
+        },
+        "max_early_data": 1024,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 60",
+      "server": "104.17.147.22",
+      "server_port": 2095,
+      "uuid": "f93c6da4-f76f-4e8e-b952-3a378e10305d",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "7.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 61",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "Telegram-ipV2Ray-zaw",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram-ipV2Ray",
+        "headers": {
+          "Host": "c.1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 62",
+      "server": "104.17.47.75",
+      "server_port": 8080,
+      "uuid": "2a9bd227-bef2-4fea-a153-7e8423a07277",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram:@vmessorg-Telegram:@vmessorg-Telegram:@vmessorg",
+        "headers": {
+          "Host": "join-to.vmessorg.Community."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 63",
+      "server": "www.speedtest.net",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 64",
+      "server": "188.114.97.3",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 65",
+      "server": "190.93.247.155",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 66",
+      "server": "104.16.11.133",
+      "server_port": 80,
+      "uuid": "914fdeef-41a3-4ef0-ab53-f4c5cee31161",
+      "transport": {
+        "type": "ws",
+        "path": "/@Vpn_Mikey%D8%8C@Vpn_Mikey",
+        "headers": {
+          "Host": "Vpn_Mikey-speedtest.net.Amir-Mikey.Tech."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 67",
+      "server": "www.parsvds.ir",
+      "server_port": 2095,
+      "uuid": "fb928eb2-6ca0-4b05-a2ed-9871d8e0891e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "31.V.v.ww.speedtest.net.zula.ir.pinocchio1.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 68",
+      "server": "www.parsvds.ir",
+      "server_port": 8080,
+      "uuid": "-Shh-Proxy-",
+      "transport": {
+        "type": "ws",
+        "path": "/SHHPROXY",
+        "headers": {
+          "Host": "SHHproxy-shhPROXY-SHHproxy.ntherspeedtest.net."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 69",
+      "server": "104.17.148.22",
+      "server_port": 8080,
+      "uuid": "3a2c2063-6841-4c31-859e-0054573b7bf3",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 70",
+      "server": "104.21.94.168",
+      "server_port": 8080,
+      "uuid": "Telegram-NUFiLTER",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER?ed=2048?ed=2048",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 71",
+      "server": "104.31.16.85",
+      "server_port": 80,
+      "uuid": "043e1274-0608-430f-821f-78578b636dc8",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "1.V.V2.www.speedtest.net.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 72",
+      "server": "ns.cloudflare.com",
+      "server_port": 80,
+      "uuid": "404711ea-9af9-4f48-c0b9-d3f6953b690a",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry,telegram-AfV2ry",
+        "headers": {
+          "Host": "10.V.V2.www.speedtest.net.ftp.debian.org.roghanali.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 73",
+      "server": "188.114.97.2",
+      "server_port": 2095,
+      "uuid": "DIgiV2RAy",
+      "transport": {
+        "type": "ws",
+        "path": "/DigiconnecT",
+        "headers": {
+          "Host": "wWw.vArZeSh3.Com.QUENTIN.1.1.1.1.radiotehran.org."
+        },
+        "max_early_data": 1024,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 74",
+      "server": "104.17.147.22",
+      "server_port": 2095,
+      "uuid": "f93c6da4-f76f-4e8e-b952-3a378e10305d",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "7.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 75",
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "Telegram-ipV2Ray-zaw",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram-ipV2Ray",
+        "headers": {
+          "Host": "c.1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 76",
+      "server": "104.17.47.75",
+      "server_port": 8080,
+      "uuid": "2a9bd227-bef2-4fea-a153-7e8423a07277",
+      "transport": {
+        "type": "ws",
+        "path": "/Telegram:@vmessorg-Telegram:@vmessorg-Telegram:@vmessorg",
+        "headers": {
+          "Host": "join-to.vmessorg.Community."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 77",
+      "server": "www.speedtest.net",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 78",
+      "server": "188.114.97.3",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 79",
+      "server": "190.93.247.155",
+      "server_port": 80,
+      "uuid": "7a6e9384-c282-4396-b647-5b1ec159b075",
+      "transport": {
+        "type": "ws",
+        "path": "/PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM-PROXY_MTM",
+        "headers": {
+          "Host": "1.www.speedtest.net.zula.ir.zemestanil.ir"
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 80",
+      "server": "104.16.11.133",
+      "server_port": 80,
+      "uuid": "914fdeef-41a3-4ef0-ab53-f4c5cee31161",
+      "transport": {
+        "type": "ws",
+        "path": "/@Vpn_Mikey%D8%8C@Vpn_Mikey",
+        "headers": {
+          "Host": "Vpn_Mikey-speedtest.net.Amir-Mikey.Tech."
+        },
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 81",
+      "server": "www.parsvds.ir",
+      "server_port": 2095,
+      "uuid": "fb928eb2-6ca0-4b05-a2ed-9871d8e0891e",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "31.V.v.ww.speedtest.net.zula.ir.pinocchio1.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 82",
+      "server": "www.parsvds.ir",
+      "server_port": 8080,
+      "uuid": "-Shh-Proxy-",
+      "transport": {
+        "type": "ws",
+        "path": "/SHHPROXY",
+        "headers": {
+          "Host": "SHHproxy-shhPROXY-SHHproxy.ntherspeedtest.net."
+        },
+        "max_early_data": 8080,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "vless",
+      "tag": "☬ SHΞЯVIN™ ⚪ رایگان § 83",
+      "server": "104.17.148.22",
+      "server_port": 8080,
+      "uuid": "3a2c2063-6841-4c31-859e-0054573b7bf3",
+      "transport": {
+        "type": "ws",
+        "path": "/telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER,telegram-NUFiLTER",
+        "headers": {
+          "Host": "6.v.v.y.www.speedtest.net.ftp.debian.org.bklink.ir."
+        },
+        "max_early_data": 2048,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
+      },
+      "packet_encoding": ""
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "direct",
+      "tag": "direct-fragment",
+      "tls_fragment": {
+        "enabled": true,
+        "size": "10-30",
+        "sleep": "2-8"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "bypass"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "inbound": "dns-in",
+        "outbound": "dns-out"
+      },
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "Direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "Global",
+        "outbound": "select"
+      }
+    ],
+    "final": "select",
+    "auto_detect_interface": true,
+    "override_android_vpn": true
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "path": "clash.db"
+    },
+    "clash_api": {
+      "external_controller": "127.0.0.1:6756",
+      "secret": "jOdWr6eLq_RjCayV"
+    }
+  }
+}
